@@ -19,7 +19,7 @@ Start the app
 Open weather App.html in your browser to start the app.
 
 🔗 Live Demo
-👉 my link
+👉 [my link](https://mubswajhi.github.io/weather_App/)
 
 💡 Features
 
