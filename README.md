@@ -6,7 +6,7 @@ A responsive and interactive weather forecast app built using HTML, Tailwind CSS
 💨Wind speed
 🌤️Weather description
 
-How to Navigate & Run the Code
+🚀 How to Navigate & Run the Code
 
 Clone this repository:
 git clone https://github.com/mubswajhi/weather_App.git
@@ -14,9 +14,10 @@ git clone https://github.com/mubswajhi/weather_App.git
 Navigate to the project folder:
 cd weather_App
 
+Start the app
 Open weather App.html in your browser to start the app.
 
-🚀 Live Demo
+🔗 Live Demo
 👉 my link
 
 💡 Features
@@ -82,4 +83,5 @@ Detect user location automatically
 Add dark/light mode toggle
 
 👤 Author
+
 Wajhiha
