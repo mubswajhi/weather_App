@@ -83,4 +83,5 @@ Detect user location automatically
 Add dark/light mode toggle
 
 👤 Author
+
 Wajhiha
