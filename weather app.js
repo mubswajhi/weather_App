@@ -23,8 +23,34 @@ async function getTemperature() {
     const weatherRes = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`);
     const weatherData = await weatherRes.json();
 
-    const temperature = weatherData.current_weather.temperature;
-    resultDiv.textContent = `🌡️ Current temperature in ${city}: ${temperature}°C`;
+     const { temperature, windspeed, weathercode } = weatherData.current_weather;
+     const weatherDescriptions = {
+      0: "Clear",
+      1: "Mainly clear",
+      2: "Partly cloudy",
+      3: "Overcast",
+      45: "Fog",
+      48: "Depositing rime fog",
+      51: "Light drizzle",
+      53: "Moderate drizzle",
+      55: "Dense drizzle",
+      61: "Light rain",
+      63: "Moderate rain",
+      65: "Heavy rain",
+      71: "Light snow fall",
+      73: "Moderate snow fall",
+      75: "Heavy snow fall",
+      80: "Rain showers",
+      81: "Moderate rain showers",
+      82: "Violent rain showers",
+      95: "Thunderstorm",
+      96: "Thunderstorm with hail",
+      99: "Heavy thunderstorm with hail"
+    };
+
+  const weatherDescription = weatherDescriptions[weathercode] || "Unknown";
+
+  resultDiv.textContent = `📍 ${city}\n🌡️ Temperature: ${temperature}°C | 💨 Wind Speed: ${windspeed} km/h | 🌤️ Weather: ${weatherDescription}`;
   } catch (error) {
     console.error(error);
     resultDiv.textContent = "⚠️ Something went wrong. Please try again later.";
